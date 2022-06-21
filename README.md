@@ -6,7 +6,7 @@
 - simple OpenSSL support for sockets
 
 ## Dependencies
-- Windows (for Serial, the Sockets __may__ work under Linux)
+- Windows (for Serial; the Sockets __may__ work under Linux)
 - a compiler (on windows it's ususally shipped with Visual Studio, alternatively clang or g++)
 - (optional, recommended) CMake (Meta-Buildsystem)
 - (optional, recommended) Ninja (Build file generator)
@@ -19,6 +19,8 @@ The simplest should be to make a CMake project and add this project as subdirect
 
 
 ## Notes
-To use `tcp_socket`s (not the server) with ssl you need to define USE_OPENSSL before including the Socket header and also link to OpenSSL. You then have to connect to the server and perform the ssl handshake.
+For browser-based documentation use Doxygen.
+
+To use `tcp_socket`s (not the server) with ssl you need to `#define USE_OPENSSL` before including the Socket header and also link to OpenSSL. You then have to connect to the server and perform the ssl handshake.
 
 The `wsa_handler` as well as the `openssl_handler` are not intended for general use, as they are helper classes to manage the one time setup for both.
